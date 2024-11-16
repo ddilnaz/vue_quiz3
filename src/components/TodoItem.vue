@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <li :class="{ completed: task.completed, high: task.priority === 'high' }">
       <span @click="toggle">{{ task.title }}</span>
       <span>({{ task.priority }})</span>
@@ -49,49 +49,6 @@
   
   li.high {
     background-color: #fdd;
-  }
-  </style>
-   -->
-   <template>
-    <li :class="{ completed: task.completed }">
-      <div>{{ task.title }} ({{ task.priority }})</div>
-      <button @click="deleteTask(task.id)">Delete</button>
-      <button @click="toggleCompletion(task.id)">
-        {{ task.completed ? 'Undo' : 'Complete' }}
-      </button>
-    </li>
-  </template>
-  
-  <script lang="ts">
-  import { defineComponent, PropType } from 'vue';
-  import { Task } from '../interfaces/Task';
-  
-  export default defineComponent({
-    name: 'TodoItemm',
-    props: {
-      task: {
-        type: Object as PropType<Task>,
-        required: true,
-      },
-    },
-    methods: {
-      deleteTask(id: number) {
-        this.$emit('delete', id);
-      },
-      toggleCompletion(id: number) {
-        this.$emit('toggle', id);
-      },
-    },
-  });
-  </script>
-  
-  <style scoped>
-  button {
-    margin: 5px;
-  }
-  
-  button:focus {
-    outline: 2px solid #4f9;
   }
   </style>
   

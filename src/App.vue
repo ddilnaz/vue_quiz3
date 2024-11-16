@@ -1,20 +1,27 @@
 <template>
   <div id="app">
-    <TodoList />
-    <!-- Если необходимо, используйте TodoItem здесь -->
+    <header>
+      <h1>Animated To-Do List</h1>
+    </header>
+    <main>
+      <TodoList />
+    </main>
+    <footer>
+      <p>Made with ❤️ using Vue.js</p>
+    </footer>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TodoList from './components/TodoList.vue';
-import TodoItem from './components/TodoItem.vue'; // Импорт компонента
+import TodoItem from './components/TodoItem.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     TodoList,
-    TodoItem,  // Регистрируем TodoItem
+    TodoItem,
   },
 });
 </script>
