@@ -64,7 +64,6 @@ export default defineComponent({
       newTaskTitle.value = '';
       newTaskPriority.value = 'low';
       
-      // Ждем выполнения задачи, затем скроллим
       nextTick(() => {
         scrollToNewTask();
       });
@@ -78,7 +77,7 @@ export default defineComponent({
       const task = tasks.value.find(task => task.id === id);
       if (task) {
         task.completed = !task.completed;
-        tasks.value = [...tasks.value]; // Для перерисовки списка
+        tasks.value = [...tasks.value]; 
       }
     };
 
@@ -110,7 +109,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* Основной стиль для ввода задач */
 .task-input {
   margin-bottom: 20px;
 }
@@ -120,8 +118,8 @@ input {
   margin-right: 10px;
   width: 60%;
   border-radius: 5px;
-  border: 1px solid #f8c8d8; /* светло-розовая рамка */
-  background-color: #f9e4f2; /* светлый розовый фон */
+  border: 1px solid #f8c8d8; 
+  background-color: #f9e4f2;
 }
 
 select {
@@ -134,14 +132,14 @@ select {
 button {
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #ff66b2; /* розовый цвет */
+  background-color: #ff66b2; 
   color: white;
   cursor: pointer;
   border: none;
 }
 
 button:hover {
-  background-color: #ff3385; /* более темный розовый при наведении */
+  background-color: #ff3385; 
 }
 
 .task-list {
@@ -152,7 +150,7 @@ button:hover {
 .task-list li {
   padding: 15px;
   margin-bottom: 10px;
-  background-color: #ffe6f1; /* нежно-розовый фон для каждой задачи */
+  background-color: #ffe6f1; 
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -162,16 +160,16 @@ button:hover {
 }
 
 .task-list li:hover {
-  background-color: #ffb3d9; /* слегка более темный оттенок при наведении */
+  background-color: #ffb3d9; 
 }
 
 .task-list li.completed {
   text-decoration: line-through;
-  color: #ffb3d9; /* светлый розовый для завершенных задач */
+  color: #ffb3d9; 
 }
 
 .task-list li.high {
-  border-left: 5px solid #ff3385; /* акцент на высокие приоритеты */
+  border-left: 5px solid #ff3385; 
 }
 
 button {

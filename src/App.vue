@@ -19,7 +19,7 @@ import TodoList from './components/TodoList.vue';
 export default defineComponent({
   name: 'App',
   components: {
-    TodoList, // Оставили только TodoList
+    TodoList, 
   },
 });
 </script>

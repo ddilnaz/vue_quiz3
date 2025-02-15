@@ -40,20 +40,20 @@ export default defineComponent({
   align-items: center;
   padding: 15px;
   margin-bottom: 12px;
-  background-color: #fff1f9; /* светло-розовый фон */
+  background-color: #fff1f9; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .todo-item:hover {
-  background-color: #ffe6f2; /* легкий оттенок розового при наведении */
-  transform: scale(1.02); /* небольшой эффект увеличения при наведении */
+  background-color: #ffe6f2; 
+  transform: scale(1.02); 
 }
 
 span {
   font-size: 1.1rem;
-  color: #ff66b2; /* розовый текст */
+  color: #ff66b2;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -61,13 +61,13 @@ span {
 
 span.completed {
   text-decoration: line-through;
-  color: #ffb3d9; /* светлый розовый для завершенных задач */
+  color: #ffb3d9; 
 }
 
 button {
   margin-left: 20px;
   padding: 8px 15px;
-  background-color: #ff66b2; /* розовая кнопка */
+  background-color: #ff66b2; 
   color: white;
   font-weight: bold;
   border: none;
@@ -77,8 +77,8 @@ button {
 }
 
 button:hover {
-  background-color: #ff3385; /* темнее розовый при наведении */
-  transform: scale(1.05); /* эффект увеличения */
+  background-color: #ff3385; 
+  transform: scale(1.05); 
 }
 
 button:focus {
